@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: #172c66;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #001858;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(254, 246, 228, .8);
+}
+
+.nav {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .brand,
+.nav .list {
+  display: flex;
+  align-items: center;
+}
+
+.nav .brand-text {
+  margin-left: .25rem;
+}
+
+.nav .list li {
+  transition: .2s;
+}
+
+.nav .list li:hover {
+  transform: scale(1.1);
+}
+
+.nav .list li+li {
+  margin-left: 1rem;
+}
+
+.container {
+  padding: 2rem 10% 2rem;
+}
+
+.landing {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.landing-description,
+.landing-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-description h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.landing-image {
+  margin: 1rem auto;
+}
+
+.landing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-auto-rows: 160px;
+  gap: 1rem;
+  counter-reset: cardCounter;
+  background-color: #8bd3dd;
+  box-shadow: inset 0 0 4px rgba(0, 24, 88, .3);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 24, 88, .3);
+  font-size: 1.5rem;
+  
+}
+
+.card::before {
+  counter-increment: cardCounter;
+  content: 'Day ' counter(cardCounter) ': ';
+  font-size: 1.5rem;
+}
+
+.card:nth-child(odd),
+.card:nth-child(even) {
+  transition: .2s;
+}
+
+.card:nth-child(odd) {
+  background: linear-gradient(45deg, rgb(254, 246, 228), rgb(243, 210, 193));
+}
+
+.card:nth-child(odd):hover,
+.card:nth-child(even):hover {
+  transform: scale(1.05);
+}
+
+.card:nth-child(even) {
+  background: linear-gradient(45deg, rgb(243, 210, 193), rgb(254, 246, 228));
+}
+
+footer {
+  width: 100%;
+  height: 36px;
+  background-color: #fef6e4;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 36px;
+}
+
+footer p img {
+  margin: 0 .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav .list li+li {
+    margin-left: 1.5rem;
+  }
+}
