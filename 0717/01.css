@@ -149,6 +149,7 @@ body {
 .header {
   width: 100%;
   height: 80px;
+  z-index: 99;
   position: fixed;
   top: 0;
   background-color: rgba(255, 255, 255, .1);
@@ -196,6 +197,11 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.landing_vertical--left,
+.landing_vertical--right {
+  opacity: 0;
 }
 
 .landing__left,
@@ -282,7 +288,26 @@ body {
   }
 
   .landing {
+    position: relative;
     flex-direction: row;
+  }
+
+  .landing_vertical--left,
+  .landing_vertical--right {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%) rotate(90deg);
+    opacity: 1;
+    transition: opacity .2s;
+  }
+
+  .landing_vertical--left {
+    left: 0;
+  }
+
+  .landing_vertical--right {
+    right: 0;
   }
 
   .landing__left {
