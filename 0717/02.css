@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+/* reset start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset end */
+
+:root {
+  --bg-light: rgba(255, 255, 255, 0.3);
+  --color-brown: #716040;
+  --color-blue: #020826;
+}
+
+body {
+  font-family: 'Limelight', cursive;
+  background-color: #f9f4ef;
+  color: var(--color-brown);
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--color-blue);
+}
+
+.header {
+  height: 96px;
+  width: 100%;
+  background-color: var(--bg-light);
+}
+
+#header__menu {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+}
+
+.header__menu--label {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-image: url('./images/list.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: .2s;
+}
+
+#header__menu:checked~.nav .header__menu--label {
+  background-image: url('./images/arrow-up.svg');
+}
+
+.nav {
+  height: 100%;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__brand {
+  font-size: 1.25rem;
+}
+
+.nav__list {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -200px;
+  z-index: -99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-light);
+  transition: .2s;
+}
+
+#header__menu:checked~.nav .nav__list {
+  top: 100%;
+}
+
+.nav__list--item {
+  margin: .5rem auto;
+  opacity: 0;
+  transition: .2s ease-out .2s;
+}
+
+#header__menu:checked~.nav .nav__list--item {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    justify-content: space-evenly;
+  }
+
+  .nav__list {
+    all: unset;
+    display: flex;
+    list-style: none;
+  }
+
+  .nav__list--item {
+    opacity: 1;
+  }
+
+  .nav__list--item+.nav__list--item {
+    margin-left: 1.5rem;
+  }
+
+  .header__menu--label {
+    display: none;
+  }
+}
