@@ -344,11 +344,11 @@ body {
   }
 
   .landing_vertical--left {
-    left: 0;
+    left: -4rem;
   }
 
   .landing_vertical--right {
-    right: 0;
+    right: -4rem;
   }
 
   .landing__left {
