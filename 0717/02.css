@@ -143,7 +143,7 @@ table {
 /* reset end */
 
 :root {
-  --bg-light: rgba(255, 255, 255, 0.3);
+  --bg-light: rgba(255, 255, 255, 0.5);
   --color-brown: #716040;
   --color-blue: #020826;
   --color-light: #eaddcf;
@@ -232,6 +232,36 @@ a:active {
 .landing {
   width: 100%;
   height: calc(100vh - 96px - 96px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-brown);
+}
+
+.landing__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: .8;
+  transition: .2s;
+}
+
+.landing-text::before {
+  content: 'Jacha-chacha-chacha-chow';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  text-align: center;
+  mix-blend-mode: color-burn;
+  color: var(--color-brown);
 }
 
 .footer {
@@ -281,5 +311,21 @@ a:active {
 
   .nav__list--item+.nav__list--item {
     margin-left: 1.5rem;
+  }
+
+  .header__menu--label {
+    display: none;
+  }
+
+  .landing {
+    background-color: var(--color-light);
+  }
+
+  .landing__image {
+    width: 400px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
   }
 }
