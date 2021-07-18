@@ -1,0 +1,409 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: linear-gradient(48deg, #333, #111);
+}
+
+.section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: (50vw)[8];
+      grid-template-rows: repeat(8, 50vw);
+      grid-template-areas: "main main" "main main" "section__item--1 section__item--2" "section__item--3 section__item--4" "section__item--5 section__item--6" "section__item--7 section__item--8" "section__item--9 section__item--10" "section__item--11 section__item--12";
+}
+
+.section__item--main {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("./images/13.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: section__item--1;
+  background-image: url("./images/1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: section__item--2;
+  background-image: url("./images/2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: section__item--3;
+  background-image: url("./images/3.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: section__item--4;
+  background-image: url("./images/4.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: section__item--5;
+  background-image: url("./images/5.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: section__item--6;
+  background-image: url("./images/6.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--7 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: section__item--7;
+  background-image: url("./images/7.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--8 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: section__item--8;
+  background-image: url("./images/8.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--9 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: section__item--9;
+  background-image: url("./images/9.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--10 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: section__item--10;
+  background-image: url("./images/10.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--11 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: section__item--11;
+  background-image: url("./images/11.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.section__item--12 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 2;
+  grid-area: section__item--12;
+  background-image: url("./images/12.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (min-width: 576px) {
+  .section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (33.33%)[3];
+        grid-template-columns: repeat(3, 33.33%);
+    -ms-grid-rows: 50vw;
+        grid-template-rows: 50vw;
+    grid-auto-rows: 33.33vw;
+        grid-template-areas: "main main main" "section__item--1 section__item--2 section__item--3" "section__item--4 section__item--5 section__item--6" "section__item--7 section__item--8 section__item--9" "section__item--10 section__item--11 section__item--12";
+  }
+  .section__item--main {
+    width: 100vw;
+    height: 50vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: (calc(100vh / 12))[12];
+        grid-template-rows: repeat(12, calc(100vh / 12));
+        grid-template-areas: "section__item--1 section__item--1 section__item--1 section__item--2 section__item--2 section__item--2 section__item--3 section__item--3 section__item--3 section__item--4 section__item--4 section__item--4" "section__item--1 section__item--1 section__item--1 section__item--2 section__item--2 section__item--2 section__item--3 section__item--3 section__item--3 section__item--4 section__item--4 section__item--4" "section__item--5 section__item--5 main main main main main main main main section__item--6 section__item--6" "section__item--5 section__item--5 main main main main main main main main section__item--6 section__item--6" "section__item--5 section__item--5 main main main main main main main main section__item--6 section__item--6" "section__item--5 section__item--5 main main main main main main main main section__item--6 section__item--6" "section__item--7 section__item--7 main main main main main main main main section__item--8 section__item--8" "section__item--7 section__item--7 main main main main main main main main section__item--8 section__item--8" "section__item--7 section__item--7 main main main main main main main main section__item--8 section__item--8" "section__item--7 section__item--7 main main main main main main main main section__item--8 section__item--8" "section__item--9 section__item--9 section__item--9 section__item--10 section__item--10 section__item--10 section__item--11 section__item--11 section__item--11 section__item--12 section__item--12 section__item--12" "section__item--9 section__item--9 section__item--9 section__item--10 section__item--10 section__item--10 section__item--11 section__item--11 section__item--11 section__item--12 section__item--12 section__item--12";
+  }
+  .section__item--main {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    opacity: .05;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+  }
+  .section__item--main:hover {
+    opacity: 1;
+  }
+  .section__item--1 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--1:hover {
+    opacity: 1;
+  }
+  .section__item--2 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--2:hover {
+    opacity: 1;
+  }
+  .section__item--3 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--3:hover {
+    opacity: 1;
+  }
+  .section__item--4 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--4:hover {
+    opacity: 1;
+  }
+  .section__item--5 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--5:hover {
+    opacity: 1;
+  }
+  .section__item--6 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--6:hover {
+    opacity: 1;
+  }
+  .section__item--7 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--7:hover {
+    opacity: 1;
+  }
+  .section__item--8 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--8:hover {
+    opacity: 1;
+  }
+  .section__item--9 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--9:hover {
+    opacity: 1;
+  }
+  .section__item--10 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--10:hover {
+    opacity: 1;
+  }
+  .section__item--11 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--11:hover {
+    opacity: 1;
+  }
+  .section__item--12 {
+    opacity: .05;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .section__item--12:hover {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=02.css.map */
