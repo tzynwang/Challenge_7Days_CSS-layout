@@ -324,11 +324,39 @@ a:active {
     background-color: var(--color-light);
   }
 
+  .landing::before,
+  .landing::after {
+    content: 'Jacha-chacha-chacha-chow';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    text-align: center;
+  }
+
+  .landing::before {
+    z-index: 1;
+  }
+
+  .landing::after {
+    z-index: 3;
+    clip-path: inset(0% calc((100vw - 400px) / 2) 0% calc((100vw - 400px) / 2));
+    mix-blend-mode: color-dodge;
+  }
+
   .landing__image {
     width: 400px;
     height: 320px;
+    z-index: 2;
     object-fit: cover;
     object-position: center center;
     opacity: 1;
+  }
+
+  .landing-text {
+    display: none;
   }
 }
