@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Uncial+Antiqua&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset end */
+
+body {
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+.section--title {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section--title--h1 {
+  margin: 1rem auto;
+  font-size: max(24px, calc(100vw / 20));
+  text-align: center;
+  line-height: max(4rem, 10vh);
+}
+
+.section--main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.section--main--item {
+  width: 90%;
+  height: clamp(25vh, 250px, 300px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 .5rem;
+  background-color: #000;
+}
+
+.section--main--item--image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  opacity: .6;
+}
+
+.section--main--item--text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: .2s;
+}
+
+.section--main--item:hover .section--main--item--text,
+.section--main--item:hover .section--main--item--image {
+  opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  margin: 2rem auto 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.footer__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: .75rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section--main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+  }
+
+  .section--main--item {
+    width: 100%;
+  }
+
+  .footer__text {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .section--main {
+    height: 65vh;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .section--main--item {
+    height: 100%;
+    margin: 0;
+    padding: 0 .5rem;
+    background-color: transparent;
+  }
+
+  .section--main--item::after {
+    content: '';
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    bottom: -8px;
+    border-bottom: 4px dotted #333;
+    transform: scaleX(0);
+    transition: .2s;
+  }
+
+  .section--main--item+.section--main--item {
+    border-left: 1px solid #000;
+  }
+
+  .section--main--item--image {
+    height: 20vh;
+    opacity: 1;
+  }
+
+  .section--main--item--text {
+    all: unset;
+    font-size: .75rem;
+    text-align: right;
+  }
+
+  /* hover effects */
+  .section--main--item:hover::after {
+    transform: scaleX(1);
+  }
+
+  .section--main--item:hover .section--main--item--image {
+    width: 40vW;
+    height: 40vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+  }
+
+  .section--main--item:hover .section--main--item--text {
+    width: 20vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    mix-blend-mode: color-burn;
+    color: #7f4f28;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+  }
+}
