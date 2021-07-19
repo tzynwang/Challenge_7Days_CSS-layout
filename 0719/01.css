@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #666;
+  font-family: 'Roboto', sans-serif;
+  color: #FFF;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__item {
+  width: 250px;
+  height: 500px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.container__item--1 {
+  background: linear-gradient(185deg, transparent 0% 39.75%, #222 40% 100%), url("https://picsum.photos/seed/11/400/300");
+}
+
+.container__item--2 {
+  background: linear-gradient(185deg, transparent 0% 39.75%, #222 40% 100%), url("https://picsum.photos/seed/21/400/300");
+}
+
+.container__item--3 {
+  background: linear-gradient(185deg, transparent 0% 39.75%, #222 40% 100%), url("https://picsum.photos/seed/31/400/300");
+}
+
+.container__item--avatar {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 6px #222;
+          box-shadow: 0 0 6px #222;
+}
+
+.container__item--name,
+.container__item--account,
+.container__item--description,
+.container__item--footer {
+  margin-bottom: 1rem;
+}
+
+.container__item--name {
+  font-size: 1.5rem;
+}
+
+.container__item--account {
+  color: #aa99ee;
+}
+
+.container__item--description {
+  font-size: .75rem;
+  line-height: 1.25rem;
+}
+
+.container__item--footer {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__item--footer--button {
+  height: 36px;
+  padding: 0 2rem;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.container__item--footer--follow {
+  border-color: #aa99ee;
+  color: #aa99ee;
+}
+
+@media screen and (min-width: 920px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 3rem;
+  }
+}
+/*# sourceMappingURL=01.css.map */
