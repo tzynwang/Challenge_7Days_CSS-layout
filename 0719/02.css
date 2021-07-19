@@ -148,8 +148,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #333;
+  background-color: #b8c1ec;
   font-family: 'Roboto', sans-serif;
+  color: #fffffe;
 }
 
 .profile-card {
@@ -164,8 +165,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
+  background: linear-gradient(145deg, #121629, #232946);
   border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px #232946;
+          box-shadow: 0 0 4px #232946;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.profile-card:hover {
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
 }
 
 .profile-card__nav {
@@ -218,12 +228,17 @@ body {
 .profile-card__name {
   margin: .5rem auto;
   font-size: 2rem;
+  font-weight: 700;
 }
 
 .profile-card__title,
 .profile-card__description {
   margin-bottom: 1rem;
   font-size: .8rem;
+}
+
+.profile-card__title {
+  opacity: .75;
 }
 
 .profile-card__description {
@@ -252,7 +267,10 @@ body {
   padding: 0 2rem;
   border: none;
   border-radius: 24px;
+  background: linear-gradient(145deg, #b8c1ec, #eebbc3);
   text-transform: uppercase;
+  font-weight: 700;
+  color: #232946;
 }
 
 .profile-card__social-media {
@@ -300,12 +318,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #333;
   border-radius: 50%;
+  background: linear-gradient(145deg, #fffffe, #b8c1ec);
+  color: #232946;
 }
 
 .profile-card__social-media--item--followers {
   position: relative;
+  font-weight: 700;
 }
 
 .profile-card__social-media--item--followers::after {
@@ -313,7 +333,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 100%;
+  top: 120%;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -322,5 +342,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: .8rem;
+  font-weight: 300;
+  opacity: .5;
+}
+
+.icon-bg-pink {
+  background: linear-gradient(145deg, #eebbc3, #fffffe);
+  color: #232946;
 }
 /*# sourceMappingURL=02.css.map */
