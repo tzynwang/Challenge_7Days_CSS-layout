@@ -169,13 +169,6 @@ body {
   border-radius: 4px;
   -webkit-box-shadow: 0 0 4px #232946;
           box-shadow: 0 0 4px #232946;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.profile-card:hover {
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
 }
 
 .profile-card__nav {
@@ -263,14 +256,34 @@ body {
 
 .profile-card__buttons--contact {
   height: 48px;
+  position: relative;
   margin-bottom: 1rem;
   padding: 0 2rem;
   border: none;
+  overflow: hidden;
   border-radius: 24px;
   background: linear-gradient(145deg, #b8c1ec, #eebbc3);
   text-transform: uppercase;
   font-weight: 700;
   color: #232946;
+}
+
+.profile-card__buttons--contact::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -120%;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: .2s .2s;
+  transition: .2s .2s;
+}
+
+.profile-card__buttons--contact:hover::before {
+  left: 120%;
 }
 
 .profile-card__social-media {
@@ -308,6 +321,7 @@ body {
 .profile-card__social-media--item--icon-bg {
   width: 48px;
   height: 48px;
+  position: relative;
   margin-bottom: 1rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -318,9 +332,28 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
   border-radius: 50%;
   background: linear-gradient(145deg, #fffffe, #b8c1ec);
   color: #232946;
+}
+
+.profile-card__social-media--item--icon-bg::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -120%;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: .2s .2s;
+  transition: .2s .2s;
+}
+
+.profile-card__social-media--item--icon-bg:hover::before {
+  left: 120%;
 }
 
 .profile-card__social-media--item--followers {
