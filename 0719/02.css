@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #b8c1ec;
+  font-family: 'Roboto', sans-serif;
+  color: #fffffe;
+}
+
+.profile-card {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(145deg, #121629, #232946);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px #232946;
+          box-shadow: 0 0 4px #232946;
+}
+
+.profile-card__nav {
+  width: 100%;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card__nav--left,
+.profile-card__nav--right {
+  margin: 0 1rem;
+}
+
+.profile-card__nav--right i + i {
+  margin-left: 1rem;
+}
+
+.profile-card__avatar {
+  height: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card__avatar--image {
+  height: 84px;
+  border-radius: 50%;
+}
+
+.profile-card__name,
+.profile-card__title,
+.profile-card__description {
+  text-align: center;
+}
+
+.profile-card__name {
+  margin: .5rem auto;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile-card__title,
+.profile-card__description {
+  margin-bottom: 1rem;
+  font-size: .8rem;
+}
+
+.profile-card__title {
+  opacity: .75;
+}
+
+.profile-card__description {
+  width: 75%;
+  line-height: 1rem;
+}
+
+.profile-card__buttons {
+  height: 60px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #b8c1ec;
+}
+
+.profile-card__buttons--contact {
+  height: 48px;
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+  border: none;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #b8c1ec, #eebbc3);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #232946;
+}
+
+.profile-card__buttons--contact::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -120%;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: .2s .2s;
+  transition: .2s .2s;
+}
+
+.profile-card__buttons--contact:hover::before {
+  left: 120%;
+}
+
+.profile-card__social-media {
+  width: 90%;
+  height: 144px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card__social-media--item {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card__social-media--item--icon-bg {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-bottom: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fffffe, #b8c1ec);
+  color: #232946;
+}
+
+.profile-card__social-media--item--icon-bg::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -120%;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: .2s .2s;
+  transition: .2s .2s;
+}
+
+.profile-card__social-media--item--icon-bg:hover::before {
+  left: 120%;
+}
+
+.profile-card__social-media--item--followers {
+  position: relative;
+  font-weight: 700;
+}
+
+.profile-card__social-media--item--followers::after {
+  content: 'followers';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: .8rem;
+  font-weight: 300;
+  opacity: .5;
+}
+
+.icon-bg-pink {
+  background: linear-gradient(145deg, #eebbc3, #fffffe);
+  color: #232946;
+}
+/*# sourceMappingURL=02.css.map */
