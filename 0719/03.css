@@ -1,0 +1,301 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(115deg, #222, #111);
+  color: #ffffee;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.container__item {
+  width: 250px;
+  height: 300px;
+  position: relative;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-color: #111;
+  -webkit-box-shadow: 0 0 4px rgba(255, 255, 238, 0.2);
+          box-shadow: 0 0 4px rgba(255, 255, 238, 0.2);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container__item::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-position: center center;
+  background-size: 120% auto;
+  -webkit-filter: blur(8px) sepia(50%);
+          filter: blur(8px) sepia(50%);
+  opacity: .6;
+}
+
+.container__item--image {
+  width: 96px;
+  height: 96px;
+  border: 1px solid #ffffee;
+  border-radius: 50%;
+  background-position: center center;
+}
+
+.container__item--1::before {
+  background-image: url("https://randomuser.me/api/portraits/women/41.jpg");
+}
+
+.container__item--image--1 {
+  background-image: url("https://randomuser.me/api/portraits/women/41.jpg");
+}
+
+.container__item--2::before {
+  background-image: url("https://randomuser.me/api/portraits/women/42.jpg");
+}
+
+.container__item--image--2 {
+  background-image: url("https://randomuser.me/api/portraits/women/42.jpg");
+}
+
+.container__item--3::before {
+  background-image: url("https://randomuser.me/api/portraits/women/43.jpg");
+}
+
+.container__item--image--3 {
+  background-image: url("https://randomuser.me/api/portraits/women/43.jpg");
+}
+
+.container__item--4::before {
+  background-image: url("https://randomuser.me/api/portraits/women/44.jpg");
+}
+
+.container__item--image--4 {
+  background-image: url("https://randomuser.me/api/portraits/women/44.jpg");
+}
+
+.container__item--name {
+  margin: 1rem auto .5rem;
+  font-size: 1.25rem;
+  letter-spacing: 4px;
+}
+
+.container__item--title {
+  font-size: .75rem;
+}
+
+.container__item--social-media {
+  margin: 1rem auto;
+  font-size: 1.25rem;
+}
+
+.container__item--social-media--item {
+  display: inline-block;
+  margin: 1rem .5rem auto;
+}
+
+.container__item--social-media--item i {
+  cursor: pointer;
+}
+
+.container:hover .container__item {
+  -webkit-transform: rotateY(10deg) scale(0.85);
+          transform: rotateY(10deg) scale(0.85);
+}
+
+.container:hover .container__item:hover ~ .container__item {
+  -webkit-transform: rotateY(-10deg) scale(0.85);
+          transform: rotateY(-10deg) scale(0.85);
+}
+
+.container .container__item:hover {
+  -webkit-transform: rotateY(0deg) scale(1.15);
+          transform: rotateY(0deg) scale(1.15);
+  z-index: 1;
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 238, 0.2);
+          box-shadow: 0 0 10px rgba(255, 255, 238, 0.2);
+}
+/*# sourceMappingURL=03.css.map */
