@@ -251,7 +251,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #b8c1ec;
 }
 
 .profile-card__buttons--contact {
