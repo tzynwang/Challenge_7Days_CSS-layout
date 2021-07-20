@@ -1,5 +1,5 @@
 @import 'reset';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap');
 
 $color-pink: #F2695C;
 $color-pink-20: rgba(242, 105, 92, .2);
@@ -7,6 +7,7 @@ $color-orange: #F2955E;
 $color-orange-light: #f9deb7;
 $color-orange-light-20: rgba(249, 222, 183, .2);
 $color-orange-light-40: rgba(249, 222, 183, .4);
+$color-orange-dark: #ba3c2b;
 
 body {
   width: 100%;
@@ -20,7 +21,7 @@ a:link,
 a:hover,
 a:visited,
 a:active {
-  color: #333;
+  color: $color-orange-dark;
 }
 
 .menu {
@@ -133,7 +134,9 @@ a:active {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $color-orange-light;
+  color: $color-orange-dark;
   &__brand {
+    font-family: 'Pacifico', cursive;
     text-transform: uppercase;
     font-weight: 800;
     text-decoration: none;
@@ -152,10 +155,11 @@ a:active {
       height: 36px;
       justify-content: center;
       align-items: center;
-      border: 1px solid $color-pink-20;
       border-radius: 50%;
+      background: linear-gradient(115deg, $color-orange, $color-pink);
       i {
         font-size: 1.5rem;
+        color: #fff;
       }
     }
   }
@@ -199,8 +203,8 @@ a:active {
 .main__body--title {
   margin: 2rem 0;
   font-size: 1.75rem;
-  font-weight: 800;
   text-transform: uppercase;
+  color: $color-orange-dark;
 }
 
 .main__body__chart {
@@ -212,6 +216,15 @@ a:active {
     background-color: #fff;
     border-radius: .5rem;
     box-shadow: 0 4px 6px $color-orange-light-40;
+  }
+}
+
+@for $i from 1 through 4 {
+  .main__body__chart--item--#{$i} {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -248,10 +261,6 @@ a:active {
     @for $i from 1 through 4 {
       .main__body__chart--item--#{$i} {
         grid-area: main__body__chart--item--#{$i};
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
     }
   }
