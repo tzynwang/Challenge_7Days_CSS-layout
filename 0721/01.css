@@ -364,4 +364,45 @@ a:active {
   border: 1px solid #f09765;
   color: #f09765;
 }
+
+@media screen and (min-width: 576px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main {
+    width: 400px;
+    height: calc(400px * 1.16);
+    position: static;
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+  .main__form--row .main__form--input--wrapper::before {
+    width: unset;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: block;
+  }
+  .main {
+    width: 50%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main__third-party-auth {
+    margin: 1rem auto;
+  }
+}
 /*# sourceMappingURL=01.css.map */

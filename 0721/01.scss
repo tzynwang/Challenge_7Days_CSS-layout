@@ -190,10 +190,36 @@ a:active {
   }
 }
 
-@media screen and (min-width: 768px) {
-  
+@media screen and (min-width: 576px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    width: 400px;
+    height: calc(400px * 1.16);
+    position: static;
+    @include shadow (4px, 4px, 8px, 0, rgba(0, 0, 0, .1));
+  }
+  .main__form--row .main__form--input--wrapper::before {
+    width: unset;
+    z-index: 0;
+  }
 }
 
-@media screen and (min-width: 1024px) {
-  
+@media screen and (min-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .main {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .main__third-party-auth {
+    margin: 1rem auto;
+  }
 }
