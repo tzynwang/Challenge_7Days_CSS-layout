@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./02.css">
+  <script src="https://kit.fontawesome.com/56b9042c9a.js" crossorigin="anonymous"></script>
+  <title>form 02</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__list--item">
+        <i class="fab fa-telegram-plane"></i>flights</li>
+      <li class="nav__list--item">
+        <i class="fas fa-bed"></i>hotels</li>
+      <li class="nav__list--item">
+        <i class="fas fa-ticket-alt"></i>tickets</li>
+    </ul>
+  </nav>
+  <section class="landing">
+    <h1 class="landing__title">let the journey begin</h1>
+  </section>
+  <main class="main">
+    <form action="/" class="main__form">
+      <div class="main__form__row main__form__row--type">
+        <input type="radio" name="type" id="round"><label for="round">round trip</label>
+        <input type="radio" name="type" id="one"><label for="one">one way</label>
+        <input type="radio" name="type" id="multi"><label for="multi">multi-city</label>
+      </div>
+      <div class="main__form__row main__form__row--flight">
+        <div>
+          <label for="from">from</label>
+          <input type="text" id="from" placeholder="Country, city or airport">
+        </div>
+        <div>
+          <label for="to">to</label>
+          <input type="text" id="to" placeholder="Country, city or airport">
+        </div>
+      </div>
+      <div class="main__form__row main__form__row--flight">
+        <div>
+          <label for="depart">depart</label>
+          <input type="date" id="depart">
+        </div>
+        <div>
+          <label for="return">return</label>
+          <input type="date" id="return">
+        </div>
+      </div>
+      <div class="main__form__row main__form__row--travelers">
+        <label for="travelers">travelers</label>
+        <select id="travelers" required>
+          <option value="" disabled selected>please select</option>
+          <option value="">adult</option>
+          <option value="">child</option>
+        </select>
+      </div>
+      <div class="main__form__row main__form__row--cabin">
+        <label for="cabin">cabin</label>
+        <select id="cabin" required>
+          <option value="" disabled selected>please select</option>
+          <option value="">economy</option>
+          <option value="">business</option>
+          <option value="">first</option>
+        </select>
+      </div>
+      <div class="main__form__row">
+        <button class="main__form__row__btn">search flight</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
