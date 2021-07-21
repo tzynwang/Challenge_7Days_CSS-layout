@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #27271B;
+}
+
+.nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #27271B;
+  color: #fffffe;
+}
+
+.nav__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list--item {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.nav__list--item i {
+  margin-right: .5rem;
+}
+
+.nav__list--item + .nav__list--item {
+  margin-left: 2rem;
+}
+
+.landing {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("./images/pexels-pierre-blaché-3016353.jpg");
+  background-position: center center;
+  background-size: cover;
+  opacity: .4;
+}
+
+.landing__title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fffffe;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(70vh - 60px);
+  position: relative;
+  background-color: #9F6D7F;
+}
+
+.main__form {
+  width: 600px;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #27271B;
+  color: #fffffe;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0 4px 8px rgba(39, 39, 27, 0.2);
+          box-shadow: 0 4px 8px rgba(39, 39, 27, 0.2);
+}
+
+.main__form__row + .main__form__row {
+  margin-top: 1.25rem;
+}
+
+.main__form__row--type,
+.main__form__row--flight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__form__row--type label,
+.main__form__row--flight label {
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+
+.main__form input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin: 0 .25rem 0 0;
+  -webkit-appearance: none;
+  border: 1px solid #fffffe;
+  border-radius: 50%;
+}
+
+.main__form input[type='radio']:checked {
+  -webkit-box-shadow: inset 0 0 0 4px #9F6D7F;
+          box-shadow: inset 0 0 0 4px #9F6D7F;
+  border-color: #9F6D7F;
+  background-color: #fffffe;
+}
+
+.main__form input[type='radio'] ~ label {
+  margin-right: 1rem;
+}
+
+.main__form__row--flight div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main__form input[type='text'],
+.main__form input[type='date'] {
+  width: 100%;
+  display: inline-block;
+  border: none;
+  padding: .5rem;
+  font-family: inherit;
+  color: rgba(39, 39, 27, 0.8);
+}
+
+.main__form input[type='text']:focus,
+.main__form input[type='date']:focus {
+  outline: none;
+}
+
+.main__form input[type='text']::-webkit-input-placeholder,
+.main__form input[type='date']::-webkit-input-placeholder {
+  color: rgba(39, 39, 27, 0.8);
+}
+
+.main__form__row--travelers,
+.main__form__row--cabin {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: inherit;
+}
+
+.main__form__row--travelers .select-wrapper,
+.main__form__row--cabin .select-wrapper {
+  width: 75%;
+  position: relative;
+}
+
+.main__form__row--travelers .select-wrapper::after,
+.main__form__row--cabin .select-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: .5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-style: solid;
+  border-width: 8px 6px 0 6px;
+  border-color: #9F6D7F transparent transparent transparent;
+}
+
+.main__form__row--travelers select,
+.main__form__row--cabin select {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  -webkit-appearance: none;
+}
+
+.main__form__row--travelers select:invalid,
+.main__form__row--cabin select:invalid {
+  font-family: inherit;
+  color: rgba(39, 39, 27, 0.8);
+}
+
+.main__form__row--travelers select:focus,
+.main__form__row--cabin select:focus {
+  outline: none;
+}
+
+.main__form__row--travelers option,
+.main__form__row--cabin option {
+  padding: .5rem;
+}
+
+.main__form__row__btn {
+  height: 48px;
+  width: 100%;
+  display: inline-block;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  background-color: #9F6D7F;
+  color: #fffffe;
+  -webkit-box-shadow: 2px 2px 16px rgba(39, 39, 27, 0.5);
+          box-shadow: 2px 2px 16px rgba(39, 39, 27, 0.5);
+  cursor: pointer;
+}
+/*# sourceMappingURL=02.css.map */

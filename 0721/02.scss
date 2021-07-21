@@ -1,0 +1,215 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+$color-dark-900: #27271B;
+$color-dark-900-20: rgba(39, 39, 27, .2);
+$color-dark-900-50: rgba(39, 39, 27, .5);
+$color-dark-900-80: rgba(39, 39, 27, .8);
+$color-brown-900: #943D00;
+$color-blue-900: #375681;
+$color-purple-400: #9F6D7F;
+$color-pink-200: #FEAD87;
+$color-light: #fffffe;
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  background-color: $color-dark-900;
+}
+
+.nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-dark-900;
+  color: $color-light;
+}
+
+.nav__list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list--item {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.nav__list--item i {
+  margin-right: .5rem;
+}
+
+.nav__list--item+.nav__list--item {
+  margin-left: 2rem;
+}
+
+.landing {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('./images/pexels-pierre-blaché-3016353.jpg');
+    background-position: center center;
+    background-size: cover;
+    opacity: .4;
+  }
+}
+
+.landing__title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-light;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(70vh - 60px);
+  position: relative;
+  background-color: $color-purple-400;
+}
+
+.main__form {
+  width: 600px;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  transform: translateX(-50%);
+  background-color: $color-dark-900;
+  color: $color-light;
+  text-transform: capitalize;
+  box-shadow: 0 4px 8px $color-dark-900-20;
+}
+
+.main__form__row+.main__form__row {
+  margin-top: 1.25rem;
+}
+
+.main__form__row--type,
+.main__form__row--flight {
+  display: flex;
+  align-items: center;
+
+  label {
+    display: inline-block;
+    margin-bottom: .25rem;
+  }
+}
+
+.main__form input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin: 0 .25rem 0 0;
+  -webkit-appearance: none;
+  border: 1px solid $color-light;
+  border-radius: 50%;
+
+  &:checked {
+    box-shadow: inset 0 0 0 4px $color-purple-400;
+    border-color: $color-purple-400;
+    background-color: $color-light;
+  }
+
+  ~ label {
+    margin-right: 1rem;
+  }
+}
+
+.main__form__row--flight div {
+  flex-grow: 1;
+}
+
+.main__form input[type='text'],
+.main__form input[type='date'] {
+  width: 100%;
+  display: inline-block;
+  border: none;
+  padding: .5rem;
+  font-family : inherit;
+  color: $color-dark-900-80;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    color: $color-dark-900-80;
+  }
+}
+
+
+.main__form__row--travelers,
+.main__form__row--cabin {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+
+  .select-wrapper {
+    width: 75%;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: .5rem;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 8px 6px 0 6px;
+      border-color: $color-purple-400 transparent transparent transparent;
+    }
+  }
+
+  select {
+    // width: 75%;
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    -webkit-appearance: none;
+    &:invalid {
+      font-family: inherit;
+      color: $color-dark-900-80;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  option {
+    padding: .5rem;
+  }
+}
+
+
+
+.main__form__row__btn {
+  height: 48px;
+  width: 100%;
+  display: inline-block;
+  border: none;
+  font-family : inherit;
+  text-transform: uppercase;
+  background-color: $color-purple-400;
+  color: $color-light;
+  box-shadow: 2px 2px 16px $color-dark-900-50;
+  cursor: pointer;
+}
