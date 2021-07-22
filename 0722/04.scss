@@ -1,0 +1,84 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+$main-color: #ba80e9;
+$main-color-complementary: #afe980;
+$dark-color: #3E3546;
+
+body {
+  font-family: 'Limelight', cursive;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: $dark-color;
+  animation: changeColor 5s linear infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.container__title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  color: $main-color-complementary;
+  font-size: 4rem;
+  text-align: right;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  animation: changeColor 5s linear infinite;
+}
+
+.container__light-bulb {
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: relative;
+}
+
+.container__light-bulb::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $main-color-complementary;
+  background-color: $main-color;
+  box-shadow: 0 0 10px $main-color, 
+  0 0 20px $main-color,
+  0 0 40px $main-color,
+  0 0 60px $main-color,
+  0 0 80px $main-color;
+  transform: scale(.1) rotate(135deg);
+  pointer-events: none;
+  transition: .3s;
+}
+
+.container__light-bulb:nth-child(even):before {
+  content: '✦';
+}
+
+.container__light-bulb:nth-child(odd):before {
+  content: '❤';
+}
+
+.container__light-bulb:hover::before {
+  transform: scale(1) rotate(0deg);
+  transition: .3s;
+}

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Limelight', cursive;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #3E3546;
+  -webkit-animation: changeColor 5s linear infinite;
+          animation: changeColor 5s linear infinite;
+}
+
+@-webkit-keyframes changeColor {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+.container__title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  color: #afe980;
+  font-size: 4rem;
+  text-align: right;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: changeColor 5s linear infinite;
+          animation: changeColor 5s linear infinite;
+}
+
+.container__light-bulb {
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: relative;
+}
+
+.container__light-bulb::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #afe980;
+  background-color: #ba80e9;
+  -webkit-box-shadow: 0 0 10px #ba80e9, 0 0 20px #ba80e9, 0 0 40px #ba80e9, 0 0 60px #ba80e9, 0 0 80px #ba80e9;
+          box-shadow: 0 0 10px #ba80e9, 0 0 20px #ba80e9, 0 0 40px #ba80e9, 0 0 60px #ba80e9, 0 0 80px #ba80e9;
+  -webkit-transform: scale(0.1) rotate(135deg);
+          transform: scale(0.1) rotate(135deg);
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container__light-bulb:nth-child(even):before {
+  content: '✦';
+}
+
+.container__light-bulb:nth-child(odd):before {
+  content: '❤';
+}
+
+.container__light-bulb:hover::before {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+/*# sourceMappingURL=04.css.map */
