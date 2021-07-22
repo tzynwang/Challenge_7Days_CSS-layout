@@ -1,0 +1,286 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("./images/pexels-eberhard-grossgasteiger-572897.jpg");
+  background-position: top;
+  background-size: cover;
+  -webkit-animation: animatedBackgroundImage 50s linear infinite;
+          animation: animatedBackgroundImage 50s linear infinite;
+}
+
+@-webkit-keyframes animatedBackgroundImage {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes animatedBackgroundImage {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.container__star {
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px white;
+          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px white;
+  -webkit-animation: animatedStar 2s linear infinite;
+          animation: animatedStar 2s linear infinite;
+}
+
+.container__star::before {
+  content: '';
+  width: 300px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, left top, right top, from(#fff), to(transparent));
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@-webkit-keyframes animatedStar {
+  0% {
+    -webkit-transform: rotate(315deg) translateX(0);
+            transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(315deg) translateX(-100vh);
+            transform: rotate(315deg) translateX(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes animatedStar {
+  0% {
+    -webkit-transform: rotate(315deg) translateX(0);
+            transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(315deg) translateX(-100vh);
+            transform: rotate(315deg) translateX(-100vh);
+    opacity: 0;
+  }
+}
+
+.container__star:nth-child(1) {
+  top: -5vh;
+  left: 55%;
+  right: 3%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.container__star:nth-child(2) {
+  top: -5vh;
+  left: 46%;
+  right: 32%;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.container__star:nth-child(3) {
+  top: -5vh;
+  left: 90%;
+  right: 26%;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.container__star:nth-child(4) {
+  top: -5vh;
+  left: 82%;
+  right: 38%;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.container__star:nth-child(5) {
+  top: -5vh;
+  left: 87%;
+  right: 21%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+/*# sourceMappingURL=02.css.map */
